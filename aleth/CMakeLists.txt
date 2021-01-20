@@ -5,7 +5,7 @@ set(
     MinerAux.cpp MinerAux.h
 )
 
-add_executable(aleth ${sources})
+add_library(aleth SHARED ${sources})
 target_link_libraries(
     aleth
     PRIVATE ethereum ethashseal evm web3jsonrpc webthree devcore Boost::program_options
